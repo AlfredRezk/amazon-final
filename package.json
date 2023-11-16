@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon app",
+    "start":"node app",
     "tailwind": "postcss public/styles/tailwind.css -o public/styles/main.css --watch"
   },
   "keywords": [],
