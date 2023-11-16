@@ -8,6 +8,9 @@
     "start":"node app",
     "tailwind": "postcss public/styles/tailwind.css -o public/styles/main.css --watch"
   },
+    "engines": {
+    "node": "18.13.0"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
