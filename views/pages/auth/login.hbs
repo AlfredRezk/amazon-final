@@ -1,0 +1,36 @@
+<div class="card mt-5">
+
+  <h1 class="font-bold text-3xl text-center mb-5"> Login</h1>
+  <form method="POST" action="/auth/login">
+    <input type="text" name="email" class="form-input" placeholder="Email" value="{{inputs.email}}"/>
+    <div class="relative">
+      <input
+        type="password"
+        name="password"
+        class="form-input"
+        placeholder="Password"
+        id="password"
+        value="{{inputs.password}}"
+      />
+      <i
+        class="fa-solid fa-eye-slash absolute top-4 right-4 cursor-pointer"
+        onclick="togglePassword()"
+        id="password-icon"
+      ></i>
+    </div>
+
+    <div class="text-center">
+      <a
+        href="/auth/forgetpassword"
+        class="text-orange-500 hover:underline block mb-2"
+      >Forget Password</a>
+      <button class="btn btn-primary">Login</button>
+    </div>
+  </form>
+
+  <p class="text-center">
+    Don't have an account
+    <a href="/auth/signup" class="text-primary-orange">Sign up here !</a></p>
+</div>
+
+

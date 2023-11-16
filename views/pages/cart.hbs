@@ -1,0 +1,45 @@
+<div class="mt-5">
+  {{#each products}}
+
+    <div class="p-6 m-3 bg-white border flex items-center justify-between flex-col md:flex-row gap-3 border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+
+<div class="flex gap-10 flex-1">
+        <img src="{{productId.image}}" alt="{{productId.title}}" class="max-h-[150px] min-w-[250px]">
+        <div class="flex-col gap-2  text-center md:text-left">
+            <h3 class="text-3xl font-bold">{{productId.title}}</h3>
+            <p class="text-xl"> {{productId.description}}</p>
+            <p class="text-primary-orange text-xl font-bold"> ${{productId.price}}</p>
+        </div>
+
+</div>
+
+<div class="flex flex-row gap-10 items-center">
+        <div class="flex">
+            <a href="/cart/remove/{{productId._id}}" class="btn-light" >-</a>
+            <input type="text" class="border border-gray-200 w-[50px] text-center" value="{{qty}}" readonly>
+            <a href="/cart/add/{{productId._id}}" class="btn-light">+</a>
+        </div>
+
+        <div class="flex  flex-row md:flex-col gap2">
+            <a href="/cart/delete/{{productId._id}}" class="btn bg-orange-500 text-white hover:bg-orange-300"> DELETE</a>
+
+        </div>
+
+</div>
+    </div>
+
+  {{/each}}
+
+
+
+  <hr>
+  <div class="flex">
+    <div class="flex-1"></div>
+    <div>
+  <h4 class="text-3xl font-bold"> Total: ${{total}}</h4>
+  <button class="btn btn-primary mt-5"> Procced with Cart </button> 
+
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.footer {
+  @apply bg-slate-200 shadow dark:bg-slate-900;
+}
+
+.navbar {
+  @apply bg-slate-100 border-gray-200 shadow-md;
+}
+
+.nav-container {
+  @apply max-w-screen-xl flex items-center justify-between mx-auto p-3;
+}
+
+.btn{
+  @apply  focus:ring-4  font-medium rounded-lg text-sm px-3 py-2 mr-2 mb-2;
+}
+
+.btn-primary{
+  @apply text-white bg-primary-orange hover:bg-orange-400 focus:ring-primary-orange;
+}
+
+.card{
+  @apply max-w-2xl p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 mx-auto;
+}
+
+.form-input{
+  @apply mb-5 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-orange focus:border-primary-orange block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-orange dark:focus:border-primary-orange outline-none;
+}
+
+.btn-light{
+  @apply text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-sm text-sm px-2 py-1 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700
+}

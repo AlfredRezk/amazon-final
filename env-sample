@@ -1,0 +1,8 @@
+PORT=5000
+HOST=127.0.0.1
+MODE=development
+MONGO_URI=mongodb+srv://alfred:password00@db.uyqbjts.mongodb.net/amazon
+SESSION_SECRET=a3394a8430235e6579b9da5160cf3b68cc1a1a50db4339089c6dc1e50188e528
+EMAIL=devtestemail2024@gmail.com
+APP_PASSWORD=anmh poen ielg fkhz
+

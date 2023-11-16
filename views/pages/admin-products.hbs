@@ -1,0 +1,25 @@
+<div class="mt-5">
+  {{#each products}}
+
+    <div class="p-6 m-3 bg-white border flex items-center flex-col md:flex-row gap-3 border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+
+        <img src="{{image}}" alt="{{title}}" class="max-h-[150px] min-w-[250px]">
+        <div class="flex-col gap-2 flex-1 text-center md:text-left">
+            <h3 class="text-3xl font-bold">{{title}}</h3>
+            <p class="text-xl"> {{description}}</p>
+            <p class="text-primary-orange text-xl font-bold"> ${{price}}</p>
+        </div>
+
+        <div class="flex  flex-row md:flex-col gap2">
+            <a href="/admin/edit/{{_id}}?edit=true" class="btn bg-orange-500 text-white hover:bg-orange-300"> EDIT</a>
+            {{!-- <a href="/admin/delete/{{_id}}" class="btn bg-red-800 text-white hover:bg-red-600"> DELETE</a> --}}
+            <form action="/admin/delete" method="post">
+              <input type="hidden" name="id" value="{{_id}}">
+              <button class="btn bg-red-800 text-white hover:bg-red-600"> DELETE</button>
+            </form>
+        </div>
+    </div>
+
+  {{/each}}
+
+</div>

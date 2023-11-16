@@ -1,0 +1,44 @@
+<div class="card mt-5">
+
+  <h1 class="font-bold text-3xl text-center mb-5"> Sign up</h1>
+  <form method="POST" action="/auth/signup">
+    <input type="text" name="email" class="form-input" placeholder="Email" value="{{inputs.email}}"/>
+    <div class="relative">
+      <input
+        type="password"
+        name="password"
+        class="form-input"
+        placeholder="Password"
+        id="password"
+        value="{{inputs.password}}"
+      />
+      <i
+        class="fa-solid fa-eye-slash absolute top-4 right-4 cursor-pointer text-orange-700"
+        onclick="togglePassword()"
+        id="password-icon"
+      ></i>
+    </div>
+    <div class="relative">
+      <input
+        type="password"
+        name="password2"
+        class="form-input"
+        placeholder="Confirm Password"
+        id="password2"
+        value="{{inputs.password2}}"
+      />
+      <i
+        class="fa-solid fa-eye-slash absolute top-4 right-4 cursor-pointer text-orange-700"
+        onclick="toggleConfirm()"
+        id="password-icon2"
+      ></i>
+    </div>
+    <div class="text-center">
+      <button class="btn btn-primary">Sign up</button>
+    </div>
+  </form>
+
+  <p class="text-center">
+    Have an account
+    <a href="/auth/login" class="text-primary-orange">Login here !</a></p>
+</div>

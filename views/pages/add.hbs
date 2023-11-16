@@ -1,0 +1,21 @@
+<div class="card mt-5">
+
+  <h1 class="font-bold text-3xl text-center mb-5"> {{#if editMode}} EDIT{{else}}ADD{{/if}} PRODUCT</h1>
+  <form method="POST" action="{{#if editMode}}/admin/edit{{else}}/admin/add{{/if}}" enctype="multipart/form-data">
+      <input type="text" name="title" class="form-input" placeholder="Product Title" value="{{product.title}}"/>
+      <input type="text" name="price" class="form-input" placeholder="Product Price" value="{{product.price}}"/>
+      {{!-- <input type="text" name="image" class="form-input" placeholder="Product Image" value="{{product.image}}"/> --}}
+      <input type="file" name="image" style="display: none;" id="image-input">
+      <div class="text-center">
+
+      <button onclick="document.getElementById('image-input').click()"
+      
+      class=" focus:ring-4 font-medium rounded-lg text-sm px-3 py-2 mr-2 mb-2 text-white bg-orange-500 hover:bg-orange-400 focus:ring-primary-orange;" type="button">Upload Image</button>
+      </div>
+      {{#if editMode}}<input type="hidden" name="id" value="{{product._id}}">{{/if}}
+      <textarea name="description" placeholder="Product description" class="form-input h-[200px]">{{product.description}}</textarea>
+       <div class="text-center">
+            <button class="btn btn-primary" > {{#if editMode}} EDIT{{else}}ADD{{/if}}</button>
+       </div>
+  </form>
+</div>
